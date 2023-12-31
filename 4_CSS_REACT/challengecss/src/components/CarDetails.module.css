@@ -1,0 +1,12 @@
+.my_h1{
+    color:rgb(148, 14, 14);
+    background-color: rgb(22, 22, 22);
+    border: 1px solid black;
+}
+
+.cards{
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin: 10px;
+}
