@@ -2,20 +2,24 @@
 import './App.css'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from './pages/Home/Home'
-import NovoCadastro from './pages/Cadastro/NovoCadastro';
-import Login from './pages/Login/Login'
+
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import NovoCadastro from './pages/Cadastro/NovoCadastro';
 import RecuperarSenha from './pages/RecuperarSenha/RecuperarSenha';
+import Rotas from './components/Rotas';
+import Layout from 'antd/es/layout/layout';
 
 
 function App() {
  
   return (
    
-   <div>
-   <BrowserRouter>
-        <Navbar />
+   <>
+   
+        {/*<Navbar />
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -24,9 +28,12 @@ function App() {
             <Route path="/recuperarsenha" element={<RecuperarSenha />} />                    
           </Routes>
         </div>
-        <Footer />
-      </BrowserRouter>
-   </div>
+  <Footer />*/}
+  
+      <Rotas />
+  
+</>
+   
   )
 }
 

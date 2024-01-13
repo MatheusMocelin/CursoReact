@@ -2,6 +2,9 @@ import MaskedInput from '../../components/MaskedInput'
 import { useState } from 'react';
 
 import './NovoCadastro.css'
+import CustomLayout from '../../components/CustomLayout';
+import SideBar from '../../components/SideBar';
+import { Layout } from 'antd';
 
 const NovoCadastro = () => {
 
@@ -36,6 +39,9 @@ const NovoCadastro = () => {
   }
 
   return (
+    <>
+  <Layout>
+   <SideBar />
     <div id='register'>
       <h2>Preencha as Informações</h2>
       <form onSubmit={handleSubmit}>
@@ -85,6 +91,8 @@ const NovoCadastro = () => {
         <input type="submit" value="Cadastrar" />
       </form>
     </div>
+    </Layout>
+    </>
   )
 }
 

@@ -1,11 +1,29 @@
-import { Link } from "react-router-dom";
 import "./Login.css";
-import { useState } from "react";
+
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Auth } from "../../hooks/Auth";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+const {login, enter} = Auth();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const auth = enter
+
+    if(enter === true){
+        navigate('/home')
+  
+    } else {
+      navigate('/')
+      
+    }
+  }, [enter])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +38,8 @@ const Login = () => {
       email,
       password,
     };
+
+    login(user);
 
     console.log(user);
 
