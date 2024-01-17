@@ -14,6 +14,7 @@ const HookUseLayoutEffect = () => {
     }, [])
 
     console.log(name)
+    console.log(name)
 
   return (
     <div>

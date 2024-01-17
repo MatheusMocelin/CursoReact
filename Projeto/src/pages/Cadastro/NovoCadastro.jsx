@@ -1,10 +1,10 @@
-import MaskedInput from '../../components/MaskedInput'
-import { useState } from 'react';
-
 import './NovoCadastro.css'
-import CustomLayout from '../../components/CustomLayout';
-import SideBar from '../../components/SideBar';
+
+import { useState } from 'react';
 import { Layout } from 'antd';
+import SideBar from '../../components/SideBar';
+import MaskedInput from '../../components/MaskedInput'
+
 
 const NovoCadastro = () => {
 
